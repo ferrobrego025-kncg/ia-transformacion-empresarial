@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Transformación de la Inteligencia Artificial en las Empresas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0b0f19; color: #f1f5f9; }
+        .code-font { font-family: 'JetBrains Mono', monospace; }
+        .glass-card { 
+            background: rgba(17, 24, 39, 0.7); 
+            backdrop-filter: blur(16px); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+        }
+        .glass-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card-hover:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(56, 189, 248, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .accent-bg {
+            background: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- Header / Navbar Principal -->
+    <header class="sticky top-0 z-50 glass-card border-b border-slate-800/80 bg-slate-950/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl accent-bg flex items-center justify-center text-slate-950 font-black text-xl shadow-lg shadow-sky-500/20">
+                    IA
+                </div>
+                <div>
+                    <h1 class="text-base font-bold text-white tracking-tight flex items-center gap-2">
+                        IA Empresarial
+                        <span class="text-[10px] uppercase font-semibold px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20">Investigación</span>
+                    </h1>
+                    <p class="text-xs text-slate-400">Fernanda Robreño Gonzalez</p>
+                </div>
+            </div>
+            
+            <nav class="hidden lg:flex items-center space-x-6 text-xs font-medium text-slate-300">
+                <a href="#investigacion" class="hover:text-sky-400 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-cubes text-sky-400"></i> Investigación</a>
+                <a href="#comparativa" class="hover:text-sky-400 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-scale-balanced text-indigo-400"></i> Hechos vs Modas</a>
+                <a href="#marcos" class="hover:text-sky-400 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-book-bookmark text-purple-400"></i> Estándares</a>
+                <a href="#preguntas" class="hover:text-sky-400 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-circle-question text-amber-400"></i> Preguntas & Respuestas</a>
+                <a href="#audiencias" class="hover:text-sky-400 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-sliders text-emerald-400"></i> Registros</a>
+                <a href="#mejora" class="hover:text-sky-400 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-wand-magic-sparkles text-rose-400"></i> Mejora Prompt</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+
+        <!-- Hero Intro con el Selector Interactivo de Registros -->
+        <section class="glass-card rounded-3xl p-8 md:p-10 border border-slate-800/80 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+            <div class="max-w-4xl space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Investigación Académica de Informática</span>
+                </div>
+
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                    La Transformación de la <span class="gradient-text">Inteligencia Artificial</span> en las Empresas
+                </h2>
+
+                <p class="text-slate-300 text-base md:text-lg leading-relaxed font-normal">
+                    La transformación de las empresas mediante Inteligencia Artificial (IA) exige la transición desde proyectos piloto aislados hacia arquitecturas de software sostenibles, respaldadas por la gobernanza de datos y la gestión del riesgo operativo. Este análisis sintetiza los pasos técnicos de integración, la gestión de datos y los retos organizacionales en el ámbito de los sistemas de información.
+                </p>
+
+                <!-- Selector de Audiencia Interactivo -->
+                <div class="pt-4 border-t border-slate-800/80 space-y-4">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-sky-400"></i> Selecciona el Registro de Comunicación (Audiencia):
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="setAudience('ejecutivo')" id="btn-ejecutivo" class="px-4 py-2 rounded-xl text-xs font-semibold bg-sky-500 text-slate-950 transition-all shadow-md">
+                            Resumen Ejecutivo
+                        </button>
+                        <button onclick="setAudience('academico')" id="btn-academico" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all border border-slate-700">
+                            Expresión Académica
+                        </button>
+                        <button onclick="setAudience('nino')" id="btn-nino" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all border border-slate-700">
+                            Explicación para Niño de 10 Años
+                        </button>
+                    </div>
+
+                    <!-- Cuadro dinámico según la audiencia -->
+                    <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 text-slate-200 text-sm leading-relaxed" id="audience-box">
+                        La integración efectiva de la IA en organizaciones requiere conectar el conocimiento interno de forma segura mediante arquitecturas RAG, manteniendo intactos los sistemas transaccionales tradicionales (ERP/CRM). El éxito operativo reside en la trazabilidad de los datos, la supervisión humana basada en riesgos y la adopción de marcos normativos globales.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 1: Integración de Modelos -->
+        <section id="investigacion" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800/80 pb-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-sky-400">Sección 01</span>
+                    <h3 class="text-2xl font-bold text-white">1. Integración de Modelos de IA en la Arquitectura Empresarial</h3>
+                </div>
+                <div class="hidden sm:block text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+                    RAG • MLOps/LLMOps • Monitoreo
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Paso 1 -->
+                <div class="glass-card glass-card-hover rounded-2xl p-6 space-y-4 relative overflow-hidden">
+                    <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold text-lg border border-sky-500/20">
+                        01
+                    </div>
+                    <h4 class="text-lg font-bold text-white flex items-center justify-between">
+                        Selección y Modelado de Arquitectura
+                        <i class="fa-solid fa-diagram-project text-slate-500 text-sm"></i>
+                    </h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Evaluación para determinar si se utilizarán modelos propietarios vía API o modelos de código abierto alojados en infraestructura propia (on-premises o nube). Se implementan patrones de diseño como <strong>Retrieval-Augmented Generation (RAG)</strong> para conectar los modelos con las bases de conocimiento corporativas sin necesidad de reentrenar el modelo base.
+                    </p>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="glass-card glass-card-hover rounded-2xl p-6 space-y-4 relative overflow-hidden">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center font-bold text-lg border border-indigo-500/20">
+                        02
+                    </div>
+                    <h4 class="text-lg font-bold text-white flex items-center justify-between">
+                        Orquestación y MLOps/LLMOps
+                        <i class="fa-solid fa-gears text-slate-500 text-sm"></i>
+                    </h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Configuración de canalizaciones (pipelines) automatizadas para la ingesta, validación, despliegue continuo y consumo del modelo mediante microservicios e interfaces API REST o gRPC.
+                    </p>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="glass-card glass-card-hover rounded-2xl p-6 space-y-4 relative overflow-hidden">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold text-lg border border-purple-500/20">
+                        03
+                    </div>
+                    <h4 class="text-lg font-bold text-white flex items-center justify-between">
+                        Monitoreo y Mantenimiento Continuo
+                        <i class="fa-solid fa-chart-line text-slate-500 text-sm"></i>
+                    </h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Supervisión en tiempo real de la deriva de datos (data drift), la deriva del concepto (concept drift), el tiempo de respuesta y la precisión de las inferencias.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabla Hechos vs Modas -->
+        <section id="comparativa" class="space-y-6">
+            <div class="border-b border-slate-800/80 pb-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Análisis Comparativo</span>
+                <h3 class="text-2xl font-bold text-white">Diferenciación entre Hechos Tecnológicos y Modas Empresariales</h3>
+            </div>
+
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-800">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm border-collapse">
+                        <thead>
+                            <tr class="border-b border-slate-800 bg-slate-900/90 text-slate-200">
+                                <th class="p-4 font-bold text-slate-400 uppercase text-xs">Dimensión</th>
+                                <th class="p-4 font-bold text-emerald-400 flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check"></i> Hecho Tecnológico
+                                </th>
+                                <th class="p-4 font-bold text-rose-400">
+                                    <i class="fa-solid fa-triangle-exclamation"></i> Moda / Hype Empresarial
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800/80 text-slate-300">
+                            <tr class="hover:bg-slate-800/30 transition-colors">
+                                <td class="p-4 font-semibold text-white whitespace-nowrap flex items-center gap-2">
+                                    <i class="fa-solid fa-microchip text-sky-400"></i> Integración de IA
+                                </td>
+                                <td class="p-4">Extensión de capacidades mediante RAG y orquestación de middleware sobre sistemas existentes.</td>
+                                <td class="p-4 text-slate-400">Sustitución inmediata de sistemas centrales (ERP/CRM) por agentes 100% autónomos.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/30 transition-colors">
+                                <td class="p-4 font-semibold text-white whitespace-nowrap flex items-center gap-2">
+                                    <i class="fa-solid fa-database text-indigo-400"></i> Manejo de Datos
+                                </td>
+                                <td class="p-4">Requisito de datos limpios, estructurados, etiquetados y con linaje verificado.</td>
+                                <td class="p-4 text-slate-400">Creación de lagos de datos masivos sin gobernanza previa (Data Swamps).</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/30 transition-colors">
+                                <td class="p-4 font-semibold text-white whitespace-nowrap flex items-center gap-2">
+                                    <i class="fa-solid fa-user-check text-purple-400"></i> Impacto Laboral
+                                </td>
+                                <td class="p-4">Rediseño de flujos de trabajo con supervisión e interacción Human-in-the-Loop.</td>
+                                <td class="p-4 text-slate-400">Eliminación masiva de departamentos enteros sin costo ni necesidad de supervisión.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Manejo de Datos y Gobernanza -->
+        <section class="space-y-6">
+            <div class="border-b border-slate-800/80 pb-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Sección 02</span>
+                <h3 class="text-2xl font-bold text-white">2. Manejo de Datos y Gobernanza Tecnológica</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card glass-card-hover rounded-2xl p-6 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-filter"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white">Ingesta y Preparación</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Procesos ETL/ELT adaptados para procesar datos estructurados y no estructurados. Implementación de bases de datos vectoriales para indexación semántica.
+                    </p>
+                </div>
+
+                <div class="glass-card glass-card-hover rounded-2xl p-6 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white">Privacidad y Seguridad</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Aplicación de técnicas de anonimización, enmascaramiento de datos y controles de acceso basados en roles (RBAC) para evitar la filtración de datos sensibles a proveedores de modelos.
+                    </p>
+                </div>
+
+                <div class="glass-card glass-card-hover rounded-2xl p-6 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-route"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white">Linaje y Trazabilidad</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Registro sistemático del origen y transformación de los datos para garantizar la audibilidad de las decisiones tomadas por el sistema.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Retos de Trabajo -->
+        <section class="space-y-6">
+            <div class="border-b border-slate-800/80 pb-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Sección 03</span>
+                <h3 class="text-2xl font-bold text-white">3. Retos de Trabajo y Cambio Organizacional</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-2xl space-y-3">
+                    <h4 class="font-bold text-white text-base flex items-center gap-2">
+                        <i class="fa-solid fa-eye text-sky-400"></i> Supervisión Humano-en-el-Bucle (Human-in-the-Loop)
+                    </h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Diseñar controles organizativos donde las salidas del modelo pasen por validación humana antes de ejecutar acciones críticas.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-3">
+                    <h4 class="font-bold text-white text-base flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap text-indigo-400"></i> Brecha de Competencias
+                    </h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Necesidad de capacitar al personal en alfabetización de IA (AI literacy) y adaptar al equipo de TI a las metodologías de operaciones de aprendizaje automático (MLOps).
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-3">
+                    <h4 class="font-bold text-white text-base flex items-center gap-2">
+                        <i class="fa-solid fa-gavel text-purple-400"></i> Riesgo Operativo y Legal
+                    </h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Gestión de alucinaciones, sesgos algorítmicos y propiedad intelectual de las salidas generadas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 4: Marcos Normalizados -->
+        <section id="marcos" class="space-y-6">
+            <div class="border-b border-slate-800/80 pb-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-purple-400">Sección 04</span>
+                <h3 class="text-2xl font-bold text-white">4. Brechas de Información y Marcos Normalizados a Consultar</h3>
+            </div>
+
+            <div class="glass-card rounded-2xl p-6 space-y-6 border border-slate-800">
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Para convertir esta estructura en un trabajo de investigación formal, es necesario profundizar en estándares internacionales de gobernanza de TI y gestión de datos. Se deben consultar las siguientes guías y normas técnicas:
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2 border-t-2 border-sky-400">
+                        <span class="text-xs font-bold text-sky-400 code-font block">ISO/IEC 42001</span>
+                        <p class="text-slate-300 text-xs leading-relaxed">
+                            Estándar internacional para el establecimiento y mejora continua de un Sistema de Gestión de Inteligencia Artificial (AIMS) en organizaciones.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2 border-t-2 border-indigo-400">
+                        <span class="text-xs font-bold text-indigo-400 code-font block">NIST AI RMF 1.0</span>
+                        <p class="text-slate-300 text-xs leading-relaxed">
+                            Marco de referencia para la identificación, mapeo y gestión de riesgos asociados a la confiabilidad y seguridad de la IA.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2 border-t-2 border-purple-400">
+                        <span class="text-xs font-bold text-purple-400 code-font block">DAMA-DMBOK</span>
+                        <p class="text-slate-300 text-xs leading-relaxed">
+                            Guía estándar para estructurar la gobernanza, calidad, arquitectura y seguridad de los datos.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2 border-t-2 border-emerald-400">
+                        <span class="text-xs font-bold text-emerald-400 code-font block">TOGAF / COBIT</span>
+                        <p class="text-slate-300 text-xs leading-relaxed">
+                            Marcos de arquitectura empresarial y gobierno de TI esenciales para alinear la infraestructura de IA con la estrategia corporativa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preguntas detonantes y Respuestas Clave -->
+        <section id="preguntas" class="space-y-6">
+            <div class="border-b border-slate-800/80 pb-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Cuestionario & Conceptos Clave</span>
+                <h3 class="text-2xl font-bold text-white">Respuestas Clave sobre IA Empresarial</h3>
+            </div>
+
+            <!-- Preguntas guía -->
+            <div class="glass-card rounded-2xl p-6 space-y-3 bg-slate-900/40">
+                <h4 class="text-sm font-bold text-sky-400 uppercase tracking-wider flex items-center gap-2">
+                    <i class="fa-solid fa-clipboard-question"></i> Preguntas Analizadas en la Investigación:
+                </h4>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-slate-400 list-disc list-inside">
+                    <li>¿Cómo funciona exactamente conectar la IA a la información interna sin reentrenar?</li>
+                    <li>¿Por qué reemplazar ERP o CRM es un mito y no un hecho real?</li>
+                    <li>¿De qué manera ocultar datos privados evita filtraciones al proveedor de IA?</li>
+                    <li>¿A qué se refiere el texto con registrar el historial de los datos?</li>
+                    <li>¿Cómo se aplica la revisión humana antes de ejecutar una acción?</li>
+                    <li>¿Para qué sirve cada estándar (ISO, NIST, DAMA, TOGAF) y por qué se necesitan tantos?</li>
+                    <li>¿Por qué se sugiere adaptar este plan según el tipo de negocio (banco, hospital, logística)?</li>
+                </ul>
+            </div>
+
+            <!-- Tarjetas de Respuestas Clave -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card p-6 rounded-2xl space-y-2">
+                    <h4 class="font-bold text-white text-base flex items-center gap-2">
+                        <i class="fa-solid fa-book-open text-sky-400 text-sm"></i> Conexión sin reentrenar (RAG)
+                    </h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Funciona como un <strong>examen a libro abierto</strong>. El modelo general de IA se conecta a un motor de búsqueda interno que localiza los documentos de la empresa en el momento y se los entrega como contexto inmediato para que elabore la respuesta, sin alterar sus parámetros originales.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-2">
+                    <h4 class="font-bold text-white text-base flex items-center gap-2">
+                        <i class="fa-solid fa-ban text-rose-400 text-sm"></i> El mito de reemplazar ERP/CRM
+                    </h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Los ERP y CRM ejecutan la contabilidad y la logística con precisión exacta e inmutable. Como la IA generativa funciona por <strong>probabilidades</strong>, usarla para reemplazar el núcleo transaccional de un negocio generaría desajustes contables y operativos inaceptables.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-2">
+                    <h4 class="font-bold text-white text-base flex items-center gap-2">
+                        <i class="fa-solid fa-user-lock text-emerald-400 text-sm"></i> Protección de datos privados
+                    </h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Antes de enviar la consulta a la IA, un software local detecta el texto sensible y reemplaza nombres, números o montos por códigos genéricos (por ejemplo, <code class="code-font text-sky-400 bg-sky-950/60 px-1.5 py-0.5 rounded border border-sky-800/50">[CLIENTE_01]</code>). La IA procesa la idea lógica sin ver la información confidencial real.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-2">
+                    <h4 class="font-bold text-white text-base flex items-center gap-2">
+                        <i class="fa-solid fa-clock-rotate-left text-amber-400 text-sm"></i> Trazabilidad del historial (Linaje de datos)
+                    </h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Es una bitácora digital que registra el archivo, fecha y párrafo exactos que la IA utilizó para dar una respuesta. Si la IA comete un error, este registro permite auditedar la fuente precisa que provocó la falla.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-2 col-span-1 md:col-span-2">
+                    <h4 class="font-bold text-white text-base flex items-center gap-2">
+                        <i class="fa-solid fa-user-check text-purple-400 text-sm"></i> Supervisión humana eficiente (Human-in-the-Loop)
+                    </h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Se aplican umbrales de riesgo. La IA atiende directamente tareas automatizadas de bajo impacto (como resumir un documento público), pero en decisiones sensibles (como aprobar un crédito) la IA solo redacta la sugerencia y exige la validación expresa de un empleado antes de ejecutarla.
+                    </p>
+                </div>
+
+                <!-- Estándares tecnológicos desglosados -->
+                <div class="glass-card p-6 rounded-2xl space-y-3 col-span-1 md:col-span-2">
+                    <h4 class="font-bold text-white text-base flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-sky-400 text-sm"></i> Estándares tecnológicos y ¿Por qué tantos?
+                    </h4>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-300">
+                        <li class="p-3 bg-slate-900/80 rounded-xl border border-slate-800"><strong class="text-white block mb-0.5">ISO/IEC 42001:</strong> Certifica la gestión responsable de la IA.</li>
+                        <li class="p-3 bg-slate-900/80 rounded-xl border border-slate-800"><strong class="text-white block mb-0.5">NIST AI RMF:</strong> Guía metodológica para evaluar y mitigar sesgos y fallos.</li>
+                        <li class="p-3 bg-slate-900/80 rounded-xl border border-slate-800"><strong class="text-white block mb-0.5">DAMA-DMBOK:</strong> Manual para ordenar, catalogar y limpiar los datos.</li>
+                        <li class="p-3 bg-slate-900/80 rounded-xl border border-slate-800"><strong class="text-white block mb-0.5">TOGAF / COBIT:</strong> Marcos para alinear la infraestructura digital con las metas de la empresa.</li>
+                    </ul>
+                    <p class="text-xs text-slate-400 pt-1">
+                        <strong>¿Por qué tantos?</strong> Cada estándar atiende un nivel distinto de la organización: estrategia corporativa, calidad del dato, mitigación de riesgo algorítmico y cumplimiento normativo.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-2 col-span-1 md:col-span-2">
+                    <h4 class="font-bold text-white text-base flex items-center gap-2">
+                        <i class="fa-solid fa-building text-indigo-400 text-sm"></i> Adaptación por sector
+                    </h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Las reglas del juego cambian según la industria: un hospital arriesga vidas y datos médicos ultra confidenciales; un banco enfrenta regulaciones financieras estrictas; una naviera busca optimizar rutas de carga. El nivel de control técnico debe ajustarse a ese riesgo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registros de Audiencia -->
+        <section id="audiencias" class="space-y-6">
+            <div class="border-b border-slate-800/80 pb-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Formatos de Comunicación</span>
+                <h3 class="text-2xl font-bold text-white">Expresiones por Registro y Audiencia</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-2xl space-y-3 border-t-2 border-sky-400">
+                    <span class="text-xs font-bold uppercase tracking-wider text-sky-400">Resumen Ejecutivo</span>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        La integración efectiva de la IA en organizaciones requiere conectar el conocimiento interno de forma segura mediante arquitecturas RAG, manteniendo intactos los sistemas transaccionales tradicionales (ERP/CRM). El éxito operativo reside en la trazabilidad de los datos, la supervisión humana basada en riesgos y la adopción de marcos normativos globales.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-3 border-t-2 border-indigo-400">
+                    <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Expresión Académica</span>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        La adopción de modelos de inteligencia artificial en entornos corporativos constituye un proceso de orquestación sistémica donde la arquitectura RAG, la gobernanza de datos y los marcos de gestión de riesgos regulados (ISO/NIST) convergen para optimizar la toma de decisiones mediante esquemas de control Human-in-the-Loop.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-3 border-t-2 border-amber-400">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Para un Niño de 10 Años</span>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Imagina que la IA es un estudiante graduado muy inteligente, pero que no conoce tu escuela. En vez de hacer que vuelva a cursar desde kínder para aprender todo de nuevo (reentrenarla), le das los cuadernos de tu clase para que revise los apuntes cuando le hagas una pregunta. Además, un profesor revisa siempre sus respuestas antes de entregarlas para asegurarse de que no haya inventado nada.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Mejora de Prompt -->
+        <section id="mejora" class="space-y-6">
+            <div class="glass-card rounded-2xl p-6 md:p-8 space-y-4 border border-rose-500/20">
+                <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-wand-magic-sparkles text-rose-400"></i> Cómo mejorar este prompt en la siguiente iteración
+                </h3>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Para afinar la calidad y especificidad del resultado en la siguiente consulta, puedes estructurar el prompt incorporando las siguientes mejoras:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                    <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
+                        <span class="text-xs font-bold text-sky-400 block">1. Delimitar el Dominio de Aplicación</span>
+                        <p class="text-xs text-slate-300">Especificar una industria o sector (ej. banca, salud o logística) para enfocar los patrones de integración y regulación aplicables.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
+                        <span class="text-xs font-bold text-indigo-400 block">2. Definir el Formato de Salida Técnico</span>
+                        <p class="text-xs text-slate-300">Solicitar diagramas de secuencia o arquitectura (por ejemplo en sintaxis PlantUML o Mermaid) para visualizar el flujo de datos en la integración RAG o MLOps.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
+                        <span class="text-xs font-bold text-purple-400 block">3. Establecer Restricciones Tecnológicas</span>
+                        <p class="text-xs text-slate-300">Indicar premisas específicas de infraestructura (ej. despliegue On-Premises vs. Cloud Multi-tenant) y marcos legales regionales (ej. Reglamento de IA de la UE o legislaciones locales de protección de datos).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card border-t border-slate-800/80 py-8 mt-12 text-center text-xs text-slate-400 space-y-2">
+        <p class="font-medium text-slate-300">Investigación Escolar de Informática • La Transformación de la IA en las Empresas</p>
+        <p>Publicado en GitHub Pages • Autora: <strong>Fernanda Robreño Gonzalez</strong></p>
+    </footer>
+
+    <!-- Script Interactivo de Selección de Audiencias -->
+    <script>
+        const texts = {
+            ejecutivo: "La integración efectiva de la IA en organizaciones requiere conectar el conocimiento interno de forma segura mediante arquitecturas RAG, manteniendo intactos los sistemas transaccionales tradicionales (ERP/CRM). El éxito operativo reside en la trazabilidad de los datos, la supervisión humana basada en riesgos y la adopción de marcos normativos globales.",
+            academico: "La adopción de modelos de inteligencia artificial en entornos corporativos constituye un proceso de orquestación sistémica donde la arquitectura RAG, la gobernanza de datos y los marcos de gestión de riesgos regulados (ISO/NIST) convergen para optimizar la toma de decisiones mediante esquemas de control Human-in-the-Loop.",
+            nino: "Imagina que la IA es un estudiante graduado muy inteligente, pero que no conoce tu escuela. En vez de hacer que vuelva a cursar desde kínder para aprender todo de nuevo (reentrenarla), le das los cuadernos de tu clase para que revise los apuntes cuando le hagas una pregunta. Además, un profesor revisa siempre sus respuestas antes de entregarlas para asegurarse de que no haya inventado nada."
+        };
+
+        function setAudience(type) {
+            document.getElementById('audience-box').innerText = texts[type];
+            
+            const btnEjecutivo = document.getElementById('btn-ejecutivo');
+            const btnAcademico = document.getElementById('btn-academico');
+            const btnNino = document.getElementById('btn-nino');
+
+            [btnEjecutivo, btnAcademico, btnNino].forEach(btn => {
+                btn.className = "px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all border border-slate-700";
+            });
+
+            const activeBtn = document.getElementById('btn-' + type);
+            activeBtn.className = "px-4 py-2 rounded-xl text-xs font-semibold bg-sky-500 text-slate-950 transition-all shadow-md";
+        }
+    </script>
+</body>
+</html>
